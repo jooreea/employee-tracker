@@ -1,8 +1,7 @@
+// Require packages
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
 const consoleTable = require('console.table');
-const fs = require('fs');
-const { ui } = require('inquirer');
 // Connect to database
 const db = mysql.createConnection(
     {
@@ -15,7 +14,7 @@ const db = mysql.createConnection(
     },
     console.log(`Connected to the company_db.`)
 );
-// Command line app
+// Command line app initializing function
 async function startApp() {
     let menuPrompt = await inquirer.prompt({
         message: "What would you like to do?",
@@ -51,6 +50,7 @@ async function startApp() {
     };
     startApp();
 };
+// Functions that execute inquirer and db queries
 async function viewEmployees() {
     try {
         let employeeView = await db.promise().query(`SELECT employee.id, first_name, last_name, title, salary, name AS department, manager FROM employee JOIN role ON employee.role_id = role.id JOIN department ON role.department_id = department.id LEFT JOIN(SELECT id, CONCAT(first_name, ' ', last_name) AS manager FROM employee) AS m ON employee.manager_id = m.id`);
