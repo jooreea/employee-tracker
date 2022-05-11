@@ -21,6 +21,6 @@ THEN I am prompted to enter the employee’s first name, last name, role, and ma
 WHEN I choose to update an employee role
 THEN I am prompted to select an employee to update and their new role and this information is updated in the database 
 # Screenshot of Browser
-![code-quiz demo](./public/assets/images/employee-tracker-screenshot.png)
+![](./public/assets/images/employee-tracker-screenshot.png)
 # Link to Deployed Page
 https://agile-forest-14677.herokuapp.com
