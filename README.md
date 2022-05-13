@@ -18,7 +18,7 @@ A business owner wants to be able to view and manage the departments, roles, and
 7. When they choose to add a role, then they are prompted to enter the name, salary, and department for the role and that role is added to the database.
 8. When they choose to add an employee, then they areprompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database.
 9. When they choose to update an employee role, then they are prompted to select an employee to update and their new role and this information is updated in the database. 
-# Screenshot of Browser
-![](./public/assets/images/employee-tracker-screenshot.png)
+# Screenshot of Application
+![](./images/employee-tracker-screenshot.png)
 # Link to Video Tutorial
-https://agile-forest-14677.herokuapp.com
+https://youtu.be/DA5YMEdJnHU
